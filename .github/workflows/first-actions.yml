@@ -26,3 +26,9 @@ jobs:
       run: |
         cd src
         python -m pytest addition.py
+
+    - name: Upload test results
+      uses: actions/upload-artifact@v2
+      with:
+        name: test-results
+        path: src/results  # Assuming your test results are stored in a 'results' directory
