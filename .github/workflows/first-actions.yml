@@ -13,13 +13,13 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Build Docker image
-      run: docker build -t my-image .
-
     - name: Run container and inspect repository configuration
       run: |
         docker run --rm -v $(pwd)/repo_configs:/repo_configs my-image cp /etc/yum.repos.d/*.repo /repo_configs
       # Optionally, you can use 'docker cp' to copy the files from a running container to the host machine
+
+    - name: Build Docker image
+      run: docker build -t my-image .
 
     - name: Build RPM package
       run: |
