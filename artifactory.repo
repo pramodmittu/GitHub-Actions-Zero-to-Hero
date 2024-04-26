@@ -1,0 +1,5 @@
+[my-artifactory-repo]
+name=my-artifactory-repo
+baseurl=https://pramod666.jfrog.io/artifactory/my-repository
+enabled=1
+gpgcheck=0
