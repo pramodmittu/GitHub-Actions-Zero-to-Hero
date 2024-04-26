@@ -30,3 +30,4 @@ jobs:
       with:
         name: my-python-app
         path: ${{ github.workspace }}/rpmbuild/RPMS/x86_64/*.rpm
+        
