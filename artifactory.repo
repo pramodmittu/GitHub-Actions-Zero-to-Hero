@@ -1,5 +1,5 @@
 [my-artifactory-repo]
 name=my-artifactory-repo
-baseurl=https://pramod666.jfrog.io/artifactory/my-repository
+baseurl=https://pramod666.jfrog.io/artifactory/pramod-docker
 enabled=1
 gpgcheck=0
