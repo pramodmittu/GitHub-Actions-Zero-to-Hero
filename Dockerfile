@@ -13,6 +13,6 @@ COPY . .
 # Run commands to build your RPM
 RUN rpmbuild -ba my-python-app.spec
 
-# Optionally, you can copy the generated RPM files to a directory on your host machine
-# Example:
-# COPY /opt/github/_work/128t-utilities/128t-utilities/RPMS/* /path/to/host/rpm/directory
+# Copy repository configuration files to a temporary location
+RUN mkdir /repo_configs
+RUN cp /etc/yum.repos.d/*.repo /repo_configs
